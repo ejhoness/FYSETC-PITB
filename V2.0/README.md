@@ -54,13 +54,14 @@ step_pin:PITB:gpio6<br>
 dir_pin:!PITB:gpio5<br>
 enable_pin:!PITB:gpio20<br>
 #endstop_pin:^!PITB:gpio16<br>
-endstop_pin: tmc2130_stepper_x:virtual_endstop<br>
+endstop_pin: tmc5160_stepper_x:virtual_endstop<br>
 homing_retract_dist: 20<br>
 rotation_distance: 40<br>
 position_endstop: 0<br>
 position_max: 209<br>
 homing_speed: 150.0<br>
 second_homing_speed: 10.0<br>
+microsteps: 32<br>
 <br>
 [tmc5160 stepper_x]<br>
 cs_pin:PITB:gpio1<br>
@@ -71,6 +72,7 @@ diag1_pin:!PITB:gpio7<br>
 driver_SGT: -64  # -64 is most sensitive value, 63 is least sensitive<br>
 #stealthchop_threshold: 999999<br>
 interpolate: False<br>
+run_current: 1.1<br>
 <br>
 [stepper_y]<br>
 step_pin:PITB:gpio13<br>
@@ -84,6 +86,7 @@ position_endstop: 210<br>
 position_max: 210<br>
 homing_speed: 150.0<br>
 second_homing_speed: 10.0<br>
+microsteps: 32<br>
  <br>
 [tmc5160 stepper_y]<br>
 cs_pin:PITB:gpio21<br>
@@ -94,6 +97,7 @@ diag1_pin:!PITB:gpio14<br>
 driver_SGT: -64  # -64 is most sensitive value, 63 is least sensitive<br>
 #stealthchop_threshold: 999999<br>
 interpolate: False<br>
+run_current: 1.1<br>
 <br>
 [fan_generic PITB_FAN0]<br>
 pin:PITB:gpio0<br>
@@ -115,6 +119,10 @@ initial_GREEN: 0.0<br>
 initial_BLUE: 0.0<br>
 initial_WHITE: 0.0<br>
 <br>
+[temperature_sensor pitb_mcu]<br>
+sensor_type = temperature_mcu<br>
+sensor_mcu = PITB<br>
+
 #[temperature_sensor PITB_TEMP0]<br>
 #sensor_type: ATC Semitec 104NT-4-R025H42G<br>
 #sensor_pin:PITB:gpio26<br>
