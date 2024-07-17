@@ -62,7 +62,7 @@ position_max: 209<br>
 homing_speed: 150.0<br>
 second_homing_speed: 10.0<br>
 <br>
-[TMC5160 stepper_x]<br>
+[tmc5160 stepper_x]<br>
 cs_pin:PITB:gpio1<br>
 spi_software_sclk_pin:PITB:gpio2<br>
 spi_software_mosi_pin:PITB:gpio3<br>
@@ -77,7 +77,7 @@ step_pin:PITB:gpio13<br>
 dir_pin:PITB:gpio23<br>
 enable_pin:!PITB:gpio22<br>
 #endstop_pin:^!PITB:gpio17<br>
-endstop_pin: tmc2130_stepper_y:virtual_endstop<br>
+endstop_pin: tmc5160_stepper_y:virtual_endstop<br>
 homing_retract_dist: 20<br>
 rotation_distance: 40<br>
 position_endstop: 210<br>
@@ -85,7 +85,7 @@ position_max: 210<br>
 homing_speed: 150.0<br>
 second_homing_speed: 10.0<br>
  <br>
-[TMC5160 stepper_y]<br>
+[tmc5160 stepper_y]<br>
 cs_pin:PITB:gpio21<br>
 spi_software_sclk_pin:PITB:gpio2<br>
 spi_software_mosi_pin:PITB:gpio3<br>
