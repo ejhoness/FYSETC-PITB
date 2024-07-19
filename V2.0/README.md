@@ -29,6 +29,7 @@ I2C connector for smart peripherals (displays, sensors, and more)<br>
 #### 2.1 pinout
 
 ![](assets/PITB_V2_pinout_00.jpg)
+![](assets/pitb.png)
 
 <table>
    <tr><td>Features</td><td>PITB Pin</td><td>RP2040 Pin</td><td>Comment</td></tr>
@@ -61,6 +62,7 @@ I2C connector for smart peripherals (displays, sensors, and more)<br>
    <tr><td>SWCLK</td><td>SWCLK</td><td>only used for debugging now and can be used for other purposes.</td></tr>
    </td><td>RESET</td><td>#RUN</td><td></td></tr>
 </table>
+
 ## Firmware
 
 Klipper:<br>
