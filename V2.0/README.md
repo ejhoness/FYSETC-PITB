@@ -4,7 +4,25 @@
 
 ### 1. Product introduction
 
+The PITB (Party in the Back) is a high performance dual motor controller board for Klipper and RRF 3D printers.
 Thanks for the great effort of the PCB designers [DFH](https://github.com/deepfriedheroin), [Armchair-Engineering](https://github.com/Armchair-Engineering), [kageurufu](Https://GitHub.com/kageurufu) and the other members from community to make this come true.
+
+## Features
+
+1. Dual 6.0A MAX onboard TMC5160 Drivers with heatsink
+2. RP2040 133Mhz 32 Bit microcontroller
+3. CANBUS CANFD based on MCP2518
+4. 12V5V/3.3V DC-DC Convertor
+5. Klipper & RRF Firmware Support
+
+RP2040 Microprocessor
+TMC5160 Drivers, using FYSETC's BIG5160 modules for up to 60V 6A per stepper
+Two fan control connectors, either 5V or 24V selectable
+3 Thermistor connector, for reading temperatures
+Two endstop connectors, 3.3V logic level
+Neopixel RGB connectors
+I2C connector for smart peripherals (displays, sensors, and more)
+
 
 ### 2. Hardware guide
 
@@ -49,6 +67,13 @@ Klipper:<br>
 [mcu PITB]<br>
 canbus_uuid: XXXXXXXXXXXX<br>
 <br>
+
+#[temperature_sensor pitb_mcu]<br>
+#sensor_type = temperature_mcu<br>
+#sensor_mcu = PITB<br>
+
+<br>
+
 [stepper_x]<br>
 step_pin:PITB:gpio6<br>
 dir_pin:!PITB:gpio5<br>
@@ -119,9 +144,6 @@ initial_GREEN: 0.0<br>
 initial_BLUE: 0.0<br>
 initial_WHITE: 0.0<br>
 <br>
-[temperature_sensor pitb_mcu]<br>
-sensor_type = temperature_mcu<br>
-sensor_mcu = PITB<br>
 
 #[temperature_sensor PITB_TEMP0]<br>
 #sensor_type: ATC Semitec 104NT-4-R025H42G<br>
@@ -140,3 +162,8 @@ sensor_mcu = PITB<br>
 #sensor_pin:PITB:gpio28<br>
 #min_temp: -50<br>
 #max_temp: 300<br>
+
+#[display]<br>
+#lcd_type: ssd1306<br>
+#i2c_mcu: pitb<br>
+#i2c_bus: i2c0e<br>
