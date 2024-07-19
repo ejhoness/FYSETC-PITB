@@ -65,8 +65,8 @@ I2C connector for smart peripherals (displays, sensors, and more)<br>
 
 Klipper:<br>
 [mcu PITB]<br>
-canbus_uuid: XXXXXXXXXXXX<br>
-<br>
+canbus_uuid: XXXXXXXXXXXX "not tested"<br>
+# serial: /dev/serial/by-id/usb-Duet_3D_Duet_3_123456789ABCDEF-if00 "not working" <br>
 
 #[temperature_sensor pitb_mcu]<br>
 #sensor_type = temperature_mcu<br>
@@ -88,6 +88,7 @@ homing_speed: 150.0<br>
 second_homing_speed: 10.0<br>
 microsteps: 32<br>
 <br>
+
 [tmc5160 stepper_x]<br>
 cs_pin:PITB:gpio1<br>
 spi_software_sclk_pin:PITB:gpio2<br>
