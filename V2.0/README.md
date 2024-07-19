@@ -166,5 +166,5 @@ initial_WHITE: 0.0<br>
 
 #[display]<br>
 #lcd_type: ssd1306<br>
-#i2c_mcu: pitb<br>
+#i2c_mcu: PITB<br>
 #i2c_bus: i2c0e<br>
