@@ -15,13 +15,13 @@ Thanks for the great effort of the PCB designers [DFH](https://github.com/deepfr
 4. 12V5V/3.3V DC-DC Convertor
 5. Klipper & RRF Firmware Support
 
-RP2040 Microprocessor
-TMC5160 Drivers, using FYSETC's BIG5160 modules for up to 60V 6A per stepper
-Two fan control connectors, either 5V or 24V selectable
-3 Thermistor connector, for reading temperatures
-Two endstop connectors, 3.3V logic level
-Neopixel RGB connectors
-I2C connector for smart peripherals (displays, sensors, and more)
+RP2040 Microprocessor<br>
+TMC5160 Drivers, using FYSETC's BIG5160 modules for up to 60V 6A per stepper<br>
+Two fan control connectors, either 5V or 24V selectable<br>
+3 Thermistor connector, for reading temperatures<br>
+Two endstop connectors, 3.3V logic level<br>
+Neopixel RGB connectors<br>
+I2C connector for smart peripherals (displays, sensors, and more)<br>
 
 
 ### 2. Hardware guide
