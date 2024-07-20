@@ -64,11 +64,15 @@ I2C connector for smart peripherals (displays, sensors, and more)<br>
 </table>
 
 ## Firmware
+![](assets/new_menu_config.png)<br>
+![](assets/output.png)<br>
+"I got uuid but no communication,"
 
+<br>
 Klipper:<br>
 [mcu PITB]<br>
-canbus_uuid: XXXXXXXXXXXX "not tested"<br>
-#serial: /dev/serial/by-id/usb-Duet_3D_Duet_3_123456789ABCDEF-if00 "not working" <br>
+canbus_uuid: XXXXXXXXXXXX <br>
+#serial: /dev/serial/by-id/usb-Duet_3D_Duet_3_123456789ABCDEF-if00 "this usb rp2040 only storage drive" <br>
 
 #[temperature_sensor pitb_mcu]<br>
 #sensor_type = temperature_mcu<br>
