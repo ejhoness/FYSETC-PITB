@@ -19,15 +19,15 @@ cd katapult<br>
 make menuconfig<br>
 make<br>
 <br>
-<pre>
-sudo nano /etc/network/interfaces.d/can0 and execute
+sudo nano /etc/network/interfaces.d/can0
 
+<pre>
 auto can0
 iface can0 can static
 bitrate 500000
 up ifconfig $IFACE txqueuelen 1024
-  
 </pre>
+
 <br>
 sudo mount /dev/sda1 /mnt/rp2040<br>
 sudo cp ~/katapult/out/deployer.elf /mnt/rp2040/
@@ -59,4 +59,16 @@ ip -details -statistics link show can0<br>
     TX: bytes  packets  errors  dropped carrier collsns 
     0          0        0       10      0       0       
 </pre>
+<br>
+<pre>
+make menuconfig
+Loaded configuration '/home/biqu/klipper/.config'
+No changes to save (for '/home/biqu/klipper/.config')
+</pre>
+<br>
+sudo cp klipper.elf /mnt/rp2040/
+<br>
+ip -details -statistics link show can0
+<br>
+cansend can0 123#45.67.89
 <br>
