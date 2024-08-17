@@ -66,7 +66,11 @@ Loaded configuration '/home/biqu/klipper/.config'
 No changes to save (for '/home/biqu/klipper/.config')
 </pre>
 <br>
+sudo mount /dev/sda1 /mnt/rp2040<br>
+<br>
 sudo cp klipper.elf /mnt/rp2040/
+<br>
+sudo cp ~/klipper/out/klipper.elf /mnt/rp2040/
 <br>
 ip -details -statistics link show can0
 <br>
