@@ -1,5 +1,8 @@
+<br>
+sudo apt-get install can-utils
+<br>
 comands to help debug 
-
+<br>
 https://gist.github.com/takurx/9b324a2d47442c78b3474c87b34bae59 tnks friend.
 <script src="https://gist.github.com/takurx/9b324a2d47442c78b3474c87b34bae59.js"></script>
 https://gist.github.com/takurx/9b324a2d47442c78b3474c87b34bae59 tnks friend.
