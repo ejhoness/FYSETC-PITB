@@ -34,8 +34,10 @@ up ifconfig $IFACE txqueuelen 1024
 </pre>
 
 <br>
+reboot into bootloader mode<br>
+sudo make flash FLASH_DEVICE=2e8a:0003<br>
 sudo mount /dev/sda1 /mnt/rp2040<br>
-sudo cp ~/katapult/out/deployer.elf /mnt/rp2040/
+sudo cp ~/katapult/out/deployer.elf /mnt/rp2040/<br>
 
 <br>
 ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
