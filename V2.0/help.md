@@ -173,3 +173,25 @@ cansend can0 123#45.67.89
     112907488  14113436 0       0       0       0       
     TX: bytes  packets  errors  dropped carrier collsns 
     7          5        0       2       0       0    </pre>
+
+<br>
+sudo ip link set can0 type can bitrate 1000000
+<br>
+make -j 4<br>
+
+reboot into bootloader mode<br>
+
+sudo make flash FLASH_DEVICE=2e8a:0003
+<br>
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+<br>
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 88910c2df297
+<br>
+now, i make comunication over canbus usb -> flypd5 -> canbus pitbv2, but no control to motors and fan.
+<br> pins motors ? spi motors ? <br>
+katapult rp2040 w25q080 16k canbus 9rx  8tx 1000000<br>
+klipper rp2040 16k canbus 9 8 1000000<br>
+make -j 4<br>
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 88910c2df297<br>
+only temp sensors, conclusion txrx pins ok temp pins ok <br> 
+TMC5160 not
