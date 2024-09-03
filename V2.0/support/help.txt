@@ -1,1 +1,46 @@
 Getting support for spi not working
+hi.
+try to add this in pitb.cfg
+for me at 48v give-me 0,5º if you have a diferent value maybe i have a brokem board, i no have fan and motors working only temp and this 0,5c
+
+
+i look strider fysetc https://github.com/FYSETC/Stridemax_Dual_FD/blob/main/SCH%26PCB/StrideMax%20Dual%20FD%20SCH%20V2.0.pdf
+
+
+[adc_temperature Voltage_Monitor]
+temperature1: 24
+voltage1: 1.160
+temperature2: 48
+voltage2: 2.329
+temperature3: 60
+voltage3: 2.916
+#...
+#   A set of temperatures (in Celsius) and voltages (in Volts) to use
+#   as reference when converting a temperature. A heater section using
+#   this sensor may also specify adc_voltage and voltage_offset
+#   parameters to define the ADC voltage (see "Common temperature
+#   amplifiers" section for details). At least two measurements must
+#   be provided.
+# temperature1:
+# resistance1:
+# temperature2:
+# resistance2:
+#...
+#   Alternatively one may specify a set of temperatures (in Celsius)
+#   and resistance (in Ohms) to use as reference when converting a
+#   temperature. A heater section using this sensor may also specify a
+#   pullup_resistor parameter (see "extruder" section for details). At
+#   least two measurements must be provided.
+
+[temperature_sensor StrideMax_Voltage]
+sensor_type: Voltage_Monitor
+sensor_pin: stridemax_dual:gpio29   #MON_48V
+adc_voltage: 3.3
+voltage_offset: 0
+#min_temp:
+#max_temp:
+#   See the "extruder" section for the definition of the above
+#   parameters.
+#gcode_id:
+#   See the "heater_generic" section for the definition of this
+#   parameter.
