@@ -1,19 +1,19 @@
+fly-dp5
+  stm32f072 -> no bootloader, usb to can pa11/pa12 canbus pb8/pb9 1000000
+  make -j4
+  sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000 -D ~/klipper/out/klipper.bin
+
 pitbv2
   katapult
   rp2040 -> w25q080 with clkdiv 2 -> 16kib bootloader ->canbus 9rx 8tx 1000000 canbus speed 
   make -j4 -> bootloader mode
   sudo make flash FLASH_DEVICE=2e8a:0003
 
-  klipper
+  klipper from https://github.com/KoiosLabs/klipper.git
   rp2040 -> bootloader offset 16kib -> canbus 9rx 8tx 1000000 canbusspeed
   make -j4
   ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
   python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 88910c2df297
-
-fly-dp5
-  stm32f072 -> no bootloader, usb to can pa11/pa12 canbus pb8/pb9 1000000
-  make -j4
-  sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000 -D ~/klipper/out/klipper.bin
 
 linuxmcu
   cd ~/klipper/
