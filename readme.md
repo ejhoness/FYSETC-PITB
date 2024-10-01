@@ -41,3 +41,5 @@ Thanks for the great effort of the PCB designers [DFH](https://github.com/deepfr
 ## Firmware
 
 ![](menu_config.png)
+![Captura de tela de 2024-10-01 10-50-28](https://github.com/user-attachments/assets/264dbe7f-71f8-4962-a0a5-88477bd74279)
+![PITBgarantiaaliexpress2](https://github.com/user-attachments/assets/cb2bed3d-9e7c-4d85-aad3-07d910c9fee6)
